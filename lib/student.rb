@@ -15,7 +15,7 @@ class Student < InteractiveRecord
   }
   
   def self.table_name
-    self.class.pluralize
+    self.to_s.downcase.pluralize
   end
 
 end
