@@ -4,6 +4,9 @@ require 'active_support/inflector'
 class InteractiveRecord
   
   def initialize
+    args.each{|key, value|
+      self.send("#{key}=", value)
+    }
   end
   
   def self.table_name
