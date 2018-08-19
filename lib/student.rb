@@ -13,5 +13,9 @@ class Student < InteractiveRecord
   self.column_names.each{|elem|
     attr_accessor elem.to_sym
   }
+  
+  def self.table_name
+    self.class.pluralize
+  end
 
 end
