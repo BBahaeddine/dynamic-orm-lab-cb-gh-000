@@ -5,7 +5,6 @@ require 'interactive_record.rb'
 class Student < InteractiveRecord
   
   def initialize(args)
-    self.new
     args.each{|key, value|
       self.send("#{key}=", value)
     }
