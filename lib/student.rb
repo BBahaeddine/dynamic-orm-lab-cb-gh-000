@@ -49,7 +49,8 @@ class Student < InteractiveRecord
   end
   
   def self.find_by(args) {
-    key, value = args.first
+    key = hash.keys[0]
+    value = hash.values[0]
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = #{value}"
     DB[:conn].execute(sql)
   }
