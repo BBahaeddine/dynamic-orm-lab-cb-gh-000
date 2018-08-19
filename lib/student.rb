@@ -34,5 +34,9 @@ class Student < InteractiveRecord
     end
     values.join(", ")
   end
+  
+  def save
+    sql = "INSERT INTO #{} VALUES"
+  end
 
 end
