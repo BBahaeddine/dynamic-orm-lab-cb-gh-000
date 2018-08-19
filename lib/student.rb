@@ -10,6 +10,8 @@ class Student < InteractiveRecord
     }
   end
   
-  self.columns_name.each{|elem|}
+  self.column_name.each{|elem|
+    attr_accessor elem.to_sym
+  }
 
 end
